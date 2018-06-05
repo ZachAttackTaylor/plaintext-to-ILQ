@@ -1,0 +1,256 @@
+{
+  "General": {
+    "QuizName": "Knowledge Check: Academic Integrity Warnings",
+    "HeadingLevel": 1,
+    "instructions": "none",
+    "feedBackType": "continuous",
+    "forceCorrect": false,
+    "repeatOnComplete": true,
+    "allowNone": false,
+    "allowPrevious": true,
+    "showHints": false,
+    "allowPartial": true,
+    "randomize": true,
+    "subtractWrong": false,
+    "preQuizText": "<p class=\"lead\">Check your understanding of Academic integrity warnings.</p><p>Select the best answer for the following questions. To begin, select Start Activity.</p>",
+    "preQuizMedia": "none",
+    "postQuizText": "none",
+    "postQuizMedia": []
+  },
+  "Questions": [
+    {
+      "questionType": "Multiple Choice",
+      "maxScoreValue": 1,
+      "questionText": "A student left her computer unattended, allowing another student to copy the material and use it as his own. This is an example of: ",
+      "hintText": "none",
+      "hintMedia": "none",
+      "answers": [
+        {
+          "answerText": "Loaned Work to Someone Else / Did not Maintain Security of Work",
+          "feedBack": "That is correct! This type of Academic Warning / Offence occurs when a student shares material for an individual assignment with another student(s), even if they do not realize that sharing was not allowed. Students and faculty are <strong>responsible</strong> for maintaining security of their work. While the student that copied the work was also in the wrong, this student is also responsible for the allowing the incident to occur. She should not have left her computer unattended.",
+          "scoreValue": 1
+        },
+        {
+          "answerText": "Unauthorized Collaboration (Unintentional)",
+          "feedBack": "That is not correct. This type of Academic Warning / Offence occurs when a student shares material for an individual assignment with another student(s), even if they do not realize that sharing was not allowed. Students and faculty are <strong>responsible</strong> for maintaining security of their work. While the student that copied the work was also in the wrong, this student is also responsible for the allowing the incident to occur. She should not have left her computer unattended."
+		},
+        {
+          "answerText": "Citing or Referencing Errors or Omissions",
+          "feedBack": "That is not correct. This type of Academic Warning / Offence occurs when a student shares material for an individual assignment with another student(s), even if they do not realize that sharing was not allowed. Students and faculty are <strong>responsible</strong> for maintaining security of their work. While the student that copied the work was also in the wrong, this student is also responsible for the allowing the incident to occur. She should not have left her computer unattended."
+		},
+        {
+          "answerText": "Copyright Infringement",
+          "feedBack": "That is not correct. This type of Academic Warning / Offence occurs when a student shares material for an individual assignment with another student(s), even if they do not realize that sharing was not allowed. Students and faculty are <strong>responsible</strong> for maintaining security of their work. While the student that copied the work was also in the wrong, this student is also responsible for the allowing the incident to occur. She should not have left her computer unattended."
+		}
+      ]
+    },
+    {
+      "questionType": "Multiple Choice",
+      "maxScoreValue": 1,
+      "questionText": "Karina and her best friend are taking the same course. Their first assignment is due in Week 5. The friend asks Karina if she can look her assignment to get ideas. Karina loans her friend the assignment. Unknown to Karina, the friend adds her name to Karina’s work and submits the assignment. This is an example of: ",
+      "hintText": "none",
+      "hintMedia": "none",
+      "answers": [
+        {
+          "answerText": "Loaned Work to Someone Else / Did not Maintain Security of Work",
+          "feedBack": "That is correct! This type of Academic Warning / Offence occurs when a student shares with another student(s) material for an individual assignment without realizing that sharing was not allowed. Although unintentional, Karina is responsible for maintaining security of her work. She should not have loaned her assignment to her friend.",
+          "scoreValue": 1
+        },
+        {
+          "answerText": "Unauthorized Collaboration (Unintentional)",
+          "feedBack": "That is not correct. This type of Academic Warning / Offence occurs when a student shares with another student(s) material for an individual assignment without realizing that sharing was not allowed. Although unintentional, Karina is responsible for maintaining security of her work. She should not have loaned her assignment to her friend."
+		},
+        {
+          "answerText": "Citing or Referencing Errors or Omissions",
+          "feedBack": "That is not correct. This type of Academic Warning / Offence occurs when a student shares with another student(s) material for an individual assignment without realizing that sharing was not allowed. Although unintentional, Karina is responsible for maintaining security of her work. She should not have loaned her assignment to her friend."
+		},
+        {
+          "answerText": "Copyright Infringement",
+          "feedBack": "That is not correct. This type of Academic Warning / Offence occurs when a student shares with another student(s) material for an individual assignment without realizing that sharing was not allowed. Although unintentional, Karina is responsible for maintaining security of her work. She should not have loaned her assignment to her friend."
+		}
+      ]
+    },
+    {
+      "questionType": "Multiple Choice",
+      "maxScoreValue": 1,
+      "questionText": "A student scanned a textbook without permission from the copyright owner and gave the electronic copy to classmates. This is an example of:",
+      "hintText": "none",
+      "hintMedia": [],
+      "answers": [
+        {
+          "answerText": "Unscholarly Behaviour",
+          "feedBack": "That is not correct. Copyright infringement occurs when students copy works beyond what is allowed under Canadian Copyright law or as permitted by the copyright owner regardless of referencing.  Copying a textbook is not <strong>fair</strong> to the author or publisher of the textbook because they are not getting paid for their hard work."
+        },
+        {
+          "answerText": "Unauthorized Collaboration (Unintentional)",
+          "feedBack": "That is not correct. Copyright infringement occurs when students copy works beyond what is allowed under Canadian Copyright law or as permitted by the copyright owner regardless of referencing.  Copying a textbook is not <strong>fair</strong> to the author or publisher of the textbook because they are not getting paid for their hard work."
+		},
+        {
+          "answerText": "Loaned Work to Someone Else",
+          "feedBack": "That is not correct. Copyright infringement occurs when students copy works beyond what is allowed under Canadian Copyright law or as permitted by the copyright owner regardless of referencing.  Copying a textbook is not <strong>fair</strong> to the author or publisher of the textbook because they are not getting paid for their hard work."
+		},
+        {
+          "answerText": "Copyright Infringement",
+          "feedBack": "That is correct! This type of Academic Warning / Offence occurs when a student shares with another student(s) material for an individual assignment without realizing that sharing was not allowed. Although unintentional, Karina is responsible for maintaining security of her work. She should not have loaned her assignment to her friend.",
+          "scoreValue": 1
+		}
+      ]
+    },
+    {
+      "questionType": "Multiple Choice",
+      "maxScoreValue": 1,
+      "questionText": "A student found the required textbook for his course on a file sharing site. The textbook is being sold in the bookstore for $150.00. The student downloads the textbook to a USB and then prints all the pages. This is an example of:",
+      "hintText": "none",
+      "hintMedia": "none",
+      "answers": [
+        {
+          "answerText": "Unscholarly Behaviour",
+          "feedBack": "That is not correct. Copyright infringement occurs when students copy works beyond what is allowed under Canadian Copyright law or as permitted by the copyright owner regardless of referencing. If a textbook is being sold in the bookstore, a legal version will not be found online for free (unless it is through a library). Copying a textbook is not <strong>fair</strong> to the author or publisher of the textbook because they are not getting paid for their hard work."
+        },
+        {
+          "answerText": "Unauthorized Collaboration (Unintentional)",
+          "feedBack": "That is not correct. Copyright infringement occurs when students copy works beyond what is allowed under Canadian Copyright law or as permitted by the copyright owner regardless of referencing. If a textbook is being sold in the bookstore, a legal version will not be found online for free (unless it is through a library). Copying a textbook is not <strong>fair</strong> to the author or publisher of the textbook because they are not getting paid for their hard work."
+		},
+        {
+          "answerText": "Loaned Work to Someone Else",
+          "feedBack": "That is not correct. Copyright infringement occurs when students copy works beyond what is allowed under Canadian Copyright law or as permitted by the copyright owner regardless of referencing. If a textbook is being sold in the bookstore, a legal version will not be found online for free (unless it is through a library). Copying a textbook is not <strong>fair</strong> to the author or publisher of the textbook because they are not getting paid for their hard work."
+		},
+        {
+          "answerText": "Copyright Infringement",
+          "feedBack": "That is correct! Copyright infringement occurs when students copy works beyond what is allowed under Canadian Copyright law or as permitted by the copyright owner regardless of referencing. If a textbook is being sold in the bookstore, a legal version will not be found online for free (unless it is through a library). Copying a textbook is not <strong>fair</strong> to the author or publisher of the textbook because they are not getting paid for their hard work.",
+          "scoreValue": 1
+		}
+      ]
+    },
+    {
+      "questionType": "Multiple Choice",
+      "maxScoreValue": 1,
+      "questionText": "Talking or otherwise communicating with someone during an exam other than the teacher, proctor or exam supervisor is an example of:",
+      "hintText": "none",
+      "hintMedia": "none",
+      "answers": [
+        {
+          "answerText": "Unscholarly Behaviour",
+          "feedBack": "That is not correct. Improper Behaviour in Testing Situations occurs when a student behaves in a distracting or disruptive manner, or behaves in a way that could be interpreted as cheating, even if direct evidence of cheating is not observed. Disrupting other students during an exam is not <strong>fair</strong> and does not show <strong>respect</strong> to classmates or the teacher."
+        },
+        {
+          "answerText": "Unauthorized Collaboration (Unintentional)",
+          "feedBack": "That is not correct. Improper Behaviour in Testing Situations occurs when a student behaves in a distracting or disruptive manner, or behaves in a way that could be interpreted as cheating, even if direct evidence of cheating is not observed. Disrupting other students during an exam is not <strong>fair</strong> and does not show <strong>respect</strong> to classmates or the teacher."
+		},
+        {
+          "answerText": "Loaned Work to Someone Else",
+          "feedBack": "That is not correct. Improper Behaviour in Testing Situations occurs when a student behaves in a distracting or disruptive manner, or behaves in a way that could be interpreted as cheating, even if direct evidence of cheating is not observed. Disrupting other students during an exam is not <strong>fair</strong> and does not show <strong>respect</strong> to classmates or the teacher."
+		},
+        {
+          "answerText": "Improper Behaviour in Testing Situations",
+          "feedBack": "That is correct! Improper Behaviour in Testing Situations occurs when a student behaves in a distracting or disruptive manner, or behaves in a way that could be interpreted as cheating, even if direct evidence of cheating is not observed. Disrupting other students during an exam is not <strong>fair</strong> and does not show <strong>respect</strong> to classmates or the teacher.",
+          "scoreValue": 1
+		}
+      ]
+    },
+    {
+      "questionType": "Multiple Choice",
+      "maxScoreValue": 1,
+      "questionText": "A student submitted an assignment using in-text citation and a reference. However, the student did not include quotation marks around one short word-for-word quotation. The student cited and referenced the source. This is an example of:",
+      "hintText": "none",
+      "hintMedia": "none",
+      "answers": [
+        {
+          "answerText": "Citing or Referencing Errors or Omissions",
+          "feedBack": "That is correct! Citing or Referencing Errors occur when students make minor errors in citation or referencing conventions in an assignment that otherwise shows substantial original work. All material used in an assignment or project must be properly cited and referenced. Providing citation and referencing shows <strong>respect</strong> to the authors that you borrowed ideas from. It is also showing honesty by letting your instructor know that someone else came up with the idea.",
+          "scoreValue": 1
+        },
+        {
+          "answerText": "Unauthorized Collaboration (Unintentional)",
+          "feedBack": "That is not correct. Citing or Referencing Errors occur when students make minor errors in citation or referencing conventions in an assignment that otherwise shows substantial original work. All material used in an assignment or project must be properly cited and referenced. Providing citation and referencing shows <strong>respect</strong> to the authors that you borrowed ideas from. It is also showing honesty by letting your instructor know that someone else came up with the idea."
+		},
+        {
+          "answerText": "Loaned Work to Someone Else",
+          "feedBack": "That is not correct. Citing or Referencing Errors occur when students make minor errors in citation or referencing conventions in an assignment that otherwise shows substantial original work. All material used in an assignment or project must be properly cited and referenced. Providing citation and referencing shows <strong>respect</strong> to the authors that you borrowed ideas from. It is also showing honesty by letting your instructor know that someone else came up with the idea."
+		},
+        {
+          "answerText": "Improper Behaviour in Testing Situations",
+          "feedBack": "That is not correct. Citing or Referencing Errors occur when students make minor errors in citation or referencing conventions in an assignment that otherwise shows substantial original work. All material used in an assignment or project must be properly cited and referenced. Providing citation and referencing shows <strong>respect</strong> to the authors that you borrowed ideas from. It is also showing honesty by letting your instructor know that someone else came up with the idea."
+		}
+      ]
+    },
+    {
+      "questionType": "Multiple Choice",
+      "maxScoreValue": 1,
+      "questionText": "A student forgot to cite one short paraphrased passage from one source but properly cited and referenced all other sources. This is an example of:",
+      "hintText": "none",
+      "hintMedia": "none",
+      "answers": [
+        {
+          "answerText": "Citing or Referencing Errors or Omissions",
+          "feedBack": "That is correct! Citing or Referencing Errors occur when students make minor errors in citation or referencing conventions in an assignment that otherwise shows substantial original work. All material used in an assignment or project must be properly cited and referenced. Proving citation and referencing shows <strong>respect</strong> to the authors that you borrowed ideas from. It is also showing honesty by letting your instructor know that someone else came up with the idea.",
+          "scoreValue": 1
+        },
+        {
+          "answerText": "Did not Maintain Security of Work",
+          "feedBack": "That is not correct. Citing or Referencing Errors occur when students make minor errors in citation or referencing conventions in an assignment that otherwise shows substantial original work. All material used in an assignment or project must be properly cited and referenced. Proving citation and referencing shows <strong>respect</strong> to the authors that you borrowed ideas from. It is also showing honesty by letting your instructor know that someone else came up with the idea."
+		},
+        {
+          "answerText": "Copyright Infringement",
+          "feedBack": "That is not correct. Citing or Referencing Errors occur when students make minor errors in citation or referencing conventions in an assignment that otherwise shows substantial original work. All material used in an assignment or project must be properly cited and referenced. Proving citation and referencing shows <strong>respect</strong> to the authors that you borrowed ideas from. It is also showing honesty by letting your instructor know that someone else came up with the idea."
+		},
+        {
+          "answerText": "Improper Behaviour in Testing Situations",
+          "feedBack": "That is not correct. Citing or Referencing Errors occur when students make minor errors in citation or referencing conventions in an assignment that otherwise shows substantial original work. All material used in an assignment or project must be properly cited and referenced. Proving citation and referencing shows <strong>respect</strong> to the authors that you borrowed ideas from. It is also showing honesty by letting your instructor know that someone else came up with the idea."
+		}
+      ]
+    },
+    {
+      "questionType": "Multiple Choice",
+      "maxScoreValue": 1,
+      "questionText": "Vihaan discussed an individual assignment with another student. The assignment instructions clearly state that the final submission must be individual work. Vihaan then included similar material as the other student in his assignment. This is an example of:",
+      "hintText": "none",
+      "hintMedia": "none",
+      "answers": [
+        {
+          "answerText": "Copyright Infringement",
+          "feedBack": "That is not correct. Unauthorized Collaboration (Unintentional) occurs when a student submits work prepared collaboratively with (an)other person(s) without knowing that this would be inappropriate. Unauthorized Collaboration shows a lack of <strong>respect</strong> for the instructor because you are not following the instructor’s directions."
+        },
+        {
+          "answerText": "Loaned Work to Someone Else",
+          "feedBack": "That is not correct. Unauthorized Collaboration (Unintentional) occurs when a student submits work prepared collaboratively with (an)other person(s) without knowing that this would be inappropriate. Unauthorized Collaboration shows a lack of <strong>respect</strong> for the instructor because you are not following the instructor’s directions."
+		},
+        {
+          "answerText": "Unauthorized Collaboration (Unintentional)",
+          "feedBack": "That is correct! Unauthorized Collaboration (Unintentional) occurs when a student submits work prepared collaboratively with (an)other person(s) without knowing that this would be inappropriate. Unauthorized Collaboration shows a lack of <strong>respect</strong> for the instructor because you are not following the instructor’s directions.",
+          "scoreValue": 1
+		},
+        {
+          "answerText": "Citing or Referencing Errors or Omissions",
+          "feedBack": "That is not correct. Unauthorized Collaboration (Unintentional) occurs when a student submits work prepared collaboratively with (an)other person(s) without knowing that this would be inappropriate. Unauthorized Collaboration shows a lack of <strong>respect</strong> for the instructor because you are not following the instructor’s directions."
+		}
+      ]
+    },
+    {
+      "questionType": "Multiple Choice",
+      "maxScoreValue": 1,
+      "questionText": "Lee is struggling to get his computer code to work. The instructions for the assignment clearly state that all work must be the individual student’s. Lee’s friend reviews the code and recommends some changes to the code. The student incorporates the suggestions into his work. This is an example of:",
+      "hintText": "none",
+      "hintMedia": "none",
+      "answers": [
+        {
+          "answerText": "Copyright Infringement",
+          "feedBack": "That is not correct. Unauthorized Collaboration (Unintentional) occurs when a student submits work prepared collaboratively with (an)other person(s) without knowing that this would be inappropriate. Unauthorized Collaboration shows a lack of <strong>respect</strong> for the instructor because you are not following the instructor’s directions."
+        },
+        {
+          "answerText": "Loaned Work to Someone Else",
+          "feedBack": "That is not correct. Unauthorized Collaboration (Unintentional) occurs when a student submits work prepared collaboratively with (an)other person(s) without knowing that this would be inappropriate. Unauthorized Collaboration shows a lack of <strong>respect</strong> for the instructor because you are not following the instructor’s directions."
+		},
+        {
+          "answerText": "Citing or Referencing Errors or Omissions",
+          "feedBack": "That is not correct. Unauthorized Collaboration (Unintentional) occurs when a student submits work prepared collaboratively with (an)other person(s) without knowing that this would be inappropriate. Unauthorized Collaboration shows a lack of <strong>respect</strong> for the instructor because you are not following the instructor’s directions."
+		},
+        {
+          "answerText": "Unauthorized Collaboration (Unintentional)",
+          "feedBack": "That is correct! Unauthorized Collaboration (Unintentional) occurs when a student submits work prepared collaboratively with (an)other person(s) without knowing that this would be inappropriate. Unauthorized Collaboration shows a lack of <strong>respect</strong> for the instructor because you are not following the instructor’s directions.",
+          "scoreValue": 1
+		}
+      ]
+    }
+  ]
+}
