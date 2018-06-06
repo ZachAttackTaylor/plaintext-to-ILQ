@@ -3,38 +3,58 @@ function Convert() {
   var plaintextInput = formatPlainText($('#plaintextInput').val().split('\n'));
   var Questions = [];
 
-   
-   for (var i = 0; i < plaintextInput.length; i++) {
-      if (plaintextInput[i] != '') {
-         var Question = {
-            questionType: "",
-            maxScoreValue: 1,
-            questionText: "",
-            hintText: "none",
-            hintMedia: "none",
-            answers: []
-         }
-         var Answer = {
-            answerText: "",
-            feedBack: "",
-            scoreValue: 0
-         }
-         for (var j = 0; (plaintextInput[i + j] != '') && (i + j != plaintextInput.length); j++) {
-            if (j === 0) {
-               Question.questionText = plaintextInput[i];
-            } else {
-               Answer.questionText = plaintextInput[i + j];
-            Question.answers.push(Answer); 
-            }
-            
-         }
-         Questions.push(Question);
-         i = i + j;
+
+  for (var i = 0; i < plaintextInput.length; i++) {
+    if (plaintextInput[i] != '') {
+      var Question = {
+        questionType: "Multiple Choice",
+        maxScoreValue: 1,
+        questionText: "",
+        hintText: "none",
+        hintMedia: "none",
+        answers: []
       }
-      
-   }
-   
-    console.log(Questions);
+
+      for (var j = 0;
+        (plaintextInput[i + j] != '') && (i + j != plaintextInput.length); j++) {
+        var Answer = {
+          answerText: "",
+          feedBack: "",
+          scoreValue: 0
+        }
+        var inputString = plaintextInput[i + j];
+        var subStringSample = inputString.substr(0, 1);
+        if (j === 0) {
+          Question.questionText = inputString;
+        } else {
+          switch (subStringSample) {
+            case "*":
+              inputString = inputString.slice(1);
+              Answer.answerText = inputString;
+              Answer.scoreValue = 1;
+              Question.answers.push(Answer);
+              break;
+            case "@":
+              inputString = inputString.slice(1);
+              Question.answers[Question.answers.length - 1].feedBack = inputString;
+              break;
+            default:
+              Answer.answerText = inputString;
+              Question.answers.push(Answer);
+          }
+
+
+
+        }
+
+      }
+      Questions.push(Question);
+      i = i + j;
+    }
+
+  }
+
+  console.log(Questions);
 
 
 
@@ -57,7 +77,8 @@ function Convert() {
       preQuizMedia: "none",
       postQuizText: "none",
       postQuizMedia: "none"
-    }
+    },
+    Questions: Questions
   };
   //Output a formatted JSON version of the quizObject to the jsonOutput textarea. 
   $('#jsonOutput').val(JSON.stringify(quizObject, null, "\t"));
@@ -67,16 +88,16 @@ function Convert() {
 function formatPlainText(array) {
   var previousEnter = false;
   var redundantLines = [];
-  
+
   for (var i = 0; i < array.length; i++) {
-      //Sets any lines that are JUST spaces to ''
+    //Sets any lines that are JUST spaces to ''
     if (isSpaces(array[i])) {
-        array[i] = '';
+      array[i] = '';
     }
-   
-     //Trim lines
+
+    //Trim lines
     array[i] = array[i].trim();
-    
+
     if (array[i] === '' && !previousEnter) {
       previousEnter = true;
     } else if (array[i] === '' && previousEnter) {
@@ -91,9 +112,9 @@ function formatPlainText(array) {
 
   }
   //After clean up, removes the leading or trailing newline, if there is one. 
-    if (array[array.length - 1] === '') {
-        array.splice(array.length - 1, 1);
-    }
+  if (array[array.length - 1] === '') {
+    array.splice(array.length - 1, 1);
+  }
   if (array[0] === '') {
     array.splice(0, 1);
   }
@@ -101,9 +122,9 @@ function formatPlainText(array) {
 }
 
 function isSpaces(testString) {
-    var justSpaces = /^\s+$/;
-    if (justSpaces.test(testString)) {
-        return true;
-    }
-    return false;
+  var justSpaces = /^\s+$/;
+  if (justSpaces.test(testString)) {
+    return true;
+  }
+  return false;
 }
