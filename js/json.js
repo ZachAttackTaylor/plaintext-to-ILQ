@@ -1,4 +1,4 @@
-function Convert() {
+function ConvertILQ() {
   //Get the text from the plainText input. 
   var plaintextInput = formatPlainText($('#plaintextInput').val().split('\n'));
   var Questions = [];
@@ -36,19 +36,19 @@ function Convert() {
               Question.answers.push(Answer);
               break;
             case "@":
-              if (inputString.substr(0,2) == "@@") {
+              if (inputString.substr(0, 2) == "@@") {
                 inputString = inputString.slice(2);
                 for (var k = 0; k < Question.answers.length; k++) {
                   if (Question.answers[k].feedBack === "")
-                  Question.answers[k].feedBack = inputString;
-                    
+                    Question.answers[k].feedBack = inputString;
+
                 }
               } else {
                 inputString = inputString.slice(1);
                 Question.answers[Question.answers.length - 1].feedBack = inputString;
               }
-              
-              break; 
+
+              break;
             default:
               Answer.answerText = inputString;
               Question.answers.push(Answer);
@@ -62,7 +62,7 @@ function Convert() {
           Question.answers[k].feedBack = defaultCorrectFeedback.concat(Question.answers[k].feedBack).trim();
           maxScoreValue++;
         }
-        
+
       }
       if (maxScoreValue > 1) {
         Question.questionType = "Multiselect";
@@ -97,6 +97,11 @@ function Convert() {
   };
   //Output a formatted JSON version of the quizObject to the jsonOutput textarea. 
   $('#jsonOutput').val(JSON.stringify(quizObject, null, "\t"));
+  document.getElementById('downloadButton').disabled = false;
+  var dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(quizObject, null, "\t"));
+  var dlAnchorElem = document.getElementById('downloadButton');
+  dlAnchorElem.setAttribute("href", dataStr);
+  dlAnchorElem.setAttribute("download", quizObject.General.QuizName + ".json");
 }
 
 //Searches through array of strings and removes empty lines if there's more than one of them in a row. 
