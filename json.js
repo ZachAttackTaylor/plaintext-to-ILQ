@@ -2,10 +2,12 @@ function Convert() {
   //Get the text from the plainText input. 
   var plaintextInput = formatPlainText($('#plaintextInput').val().split('\n'));
   var Questions = [];
-
+  var defaultCorrectFeedback = "That's correct! ";
+  var defaultIncorrectFeedback = "That's incorrect. ";
 
   for (var i = 0; i < plaintextInput.length; i++) {
     if (plaintextInput[i] != '') {
+      var maxScoreValue = 0;
       var Question = {
         questionType: "Multiple Choice",
         maxScoreValue: 1,
@@ -14,7 +16,6 @@ function Convert() {
         hintMedia: "none",
         answers: []
       }
-
       for (var j = 0;
         (plaintextInput[i + j] != '') && (i + j != plaintextInput.length); j++) {
         var Answer = {
@@ -35,28 +36,42 @@ function Convert() {
               Question.answers.push(Answer);
               break;
             case "@":
-              inputString = inputString.slice(1);
-              Question.answers[Question.answers.length - 1].feedBack = inputString;
-              break;
+              if (inputString.substr(0,2) == "@@") {
+                inputString = inputString.slice(2);
+                for (var k = 0; k < Question.answers.length; k++) {
+                  if (Question.answers[k].feedBack === "")
+                  Question.answers[k].feedBack = inputString;
+                    
+                }
+              } else {
+                inputString = inputString.slice(1);
+                Question.answers[Question.answers.length - 1].feedBack = inputString;
+              }
+              
+              break; 
             default:
               Answer.answerText = inputString;
               Question.answers.push(Answer);
           }
-
-
-
         }
-
+      }
+      for (var k = 0; k < Question.answers.length; k++) {
+        if (Question.answers[k].scoreValue === 0) {
+          Question.answers[k].feedBack = defaultIncorrectFeedback.concat(Question.answers[k].feedBack).trim();
+        } else {
+          Question.answers[k].feedBack = defaultCorrectFeedback.concat(Question.answers[k].feedBack).trim();
+          maxScoreValue++;
+        }
+        
+      }
+      if (maxScoreValue > 1) {
+        Question.questionType = "Multiselect";
+        Question.maxScoreValue = maxScoreValue;
       }
       Questions.push(Question);
       i = i + j;
     }
-
   }
-
-  console.log(Questions);
-
-
 
   //Default 'General' settings for the quiz. 
   var quizObject = {
