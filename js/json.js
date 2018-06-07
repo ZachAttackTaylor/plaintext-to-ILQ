@@ -2,8 +2,8 @@ function ConvertILQ() {
   //Get the text from the plainText input. 
   var plaintextInput = formatPlainText($('#plaintextInput').val().split('\n'));
   var Questions = [];
-  var defaultCorrectFeedback = "That's correct! ";
-  var defaultIncorrectFeedback = "That's incorrect. ";
+  var defaultCorrectFeedback = "That is correct! ";
+  var defaultIncorrectFeedback = "That is not correct. ";
 
   for (var i = 0; i < plaintextInput.length; i++) {
     if (plaintextInput[i] != '') {
