@@ -65,7 +65,7 @@ function ConvertILQ() {
 
       }
       if (maxScoreValue > 1) {
-        Question.questionType = "Multiselect";
+        Question.questionType = "All That Apply";
         Question.maxScoreValue = maxScoreValue;
       }
       Questions.push(Question);
@@ -79,7 +79,7 @@ function ConvertILQ() {
       QuizName: "Activity Title",
       HeadingLevel: 1,
       instructions: "none",
-      feedbackType: "continuous",
+      feedBackType: "continuous",
       forceCorrect: false,
       repeatOnComplete: true,
       allowNone: false,
@@ -96,9 +96,9 @@ function ConvertILQ() {
     Questions: Questions
   };
   //Output a formatted JSON version of the quizObject to the jsonOutput textarea. 
-  $('#jsonOutput').val(JSON.stringify(quizObject, null, "\t"));
+  $('#jsonOutput').val(JSON.stringify(quizObject, null, 2));
   document.getElementById('downloadButton').disabled = false;
-  var dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(quizObject, null, "\t"));
+  var dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(quizObject, null, 2));
   var dlAnchorElem = document.getElementById('downloadButton');
   dlAnchorElem.setAttribute("href", dataStr);
   dlAnchorElem.setAttribute("download", quizObject.General.QuizName + ".json");
