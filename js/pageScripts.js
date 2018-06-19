@@ -1,10 +1,6 @@
 //Global on page ready function scripts. 
 $(window).on('load', function () {
-
-  // Target all classed with ".lined"
   $("textarea").linedtextarea();
-
-
 });
 
 function Format() {
@@ -18,10 +14,8 @@ function Format() {
 
 function CopyToClipboard() {
   var copyText = document.getElementById("jsonOutput");
-
   /* Select the text field */
   copyText.select();
-
   /* Copy the text inside the text field */
   document.execCommand("copy");
 }

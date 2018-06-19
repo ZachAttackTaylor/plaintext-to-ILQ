@@ -19,12 +19,18 @@
     <div class="row">
       <div class="col-md-12">
         <h1>Plaintext to JSON Converter for ILQ</h1>
+        <h2>Instructions</h2>
+        <p><strong>Questions should follow the following format:</strong></p>
+        <hr>
+        <p>Question<br>Answer<br>@individual answer feedback<br>*correct answer<br>answer<br>answer<br>@@overall feedback for all questions</p>
+        <hr>
+        <p>Each question should be separated by an empty line. The first line in each block of lines must always be the question. Designate the question as an 'All That Apply' type question simply by indicating more than one correct answer. Press the <strong>Format Text</strong> button to trim whitespaces and concurrent empty lines.</p>
       </div>
     </div>
     <div class="row">
-      <div class="col col-lg-4 col-md-12">
+      <div class="col col-md-12">
         <h2>Plain Text Input</h2><textarea rows="29" id="plaintextInput"></textarea><button onclick="Format()" class="runButtons">Format Text</button><button onclick="ConvertILQ()" class="runButtons">Convert to JSON</button></div>
-      <div class="col col-lg-8 col-md-12">
+      <div class="col col-md-12">
         <h2>JSON Output</h2><textarea rows="29" id="jsonOutput" readonly></textarea><button onclick="CopyToClipboard()" class="runButtons">Copy to Clipboard</button><a id="downloadButton" class="runButtons" role="button" href="" disabled>Download .json File</a></div>
     </div>
 
