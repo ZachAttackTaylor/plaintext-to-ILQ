@@ -20,9 +20,9 @@ function ConvertILQ() {
         (plaintextInput[i + j] != '') && (i + j != plaintextInput.length); j++) {
         var Answer = {
           answerText: "",
-          feedBack: "",
           scoreValue: 0
         }
+        var generalFeedback = "";
         var inputString = plaintextInput[i + j];
         var subStringSample = inputString.substr(0, 1);
         if (j === 0) {
@@ -34,15 +34,21 @@ function ConvertILQ() {
               Answer.answerText = inputString;
               Answer.scoreValue = 1;
               Question.answers.push(Answer);
+              maxScoreValue++;
               break;
             case "@":
               if (inputString.substr(0, 2) == "@@") {
                 inputString = inputString.slice(2);
-                for (var k = 0; k < Question.answers.length; k++) {
-                  if (Question.answers[k].feedBack === "")
-                    Question.answers[k].feedBack = inputString;
-
+                if (maxScoreValue > 1) {
+                  generalFeedback = inputString;
+                } else {
+                  for (var k = 0; k < Question.answers.length; k++) {
+                    if (Question.answers[k].feedBack === undefined) {
+                      Question.answers[k].feedBack = inputString;
+                    }
+                  }
                 }
+
               } else {
                 inputString = inputString.slice(1);
                 Question.answers[Question.answers.length - 1].feedBack = inputString;
@@ -55,18 +61,31 @@ function ConvertILQ() {
           }
         }
       }
-      for (var k = 0; k < Question.answers.length; k++) {
-        if (Question.answers[k].scoreValue === 0) {
-          Question.answers[k].feedBack = defaultIncorrectFeedback.concat(Question.answers[k].feedBack).trim();
-        } else {
-          Question.answers[k].feedBack = defaultCorrectFeedback.concat(Question.answers[k].feedBack).trim();
-          maxScoreValue++;
-        }
 
-      }
       if (maxScoreValue > 1) {
         Question.questionType = "All That Apply";
         Question.maxScoreValue = maxScoreValue;
+        if (generalFeedback != "") {
+          Question.generalFeedback = generalFeedback;
+        }
+
+      } else {
+        for (var k = 0; k < Question.answers.length; k++) {
+          if (Question.answers[k].feedBack === undefined) {
+            if (Question.answers[k].scoreValue === 0) {
+              Question.answers[k].feedBack = defaultIncorrectFeedback.trim();
+            } else {
+              Question.answers[k].feedBack = defaultCorrectFeedback.trim();
+            }
+          } else {
+            if (Question.answers[k].scoreValue === 0) {
+              Question.answers[k].feedBack = defaultIncorrectFeedback.concat(Question.answers[k].feedBack).trim();
+            } else {
+              Question.answers[k].feedBack = defaultCorrectFeedback.concat(Question.answers[k].feedBack).trim();
+            }
+          }
+
+        }
       }
       Questions.push(Question);
       i = i + j;
@@ -143,8 +162,5 @@ function formatPlainText(array) {
 
 function isSpaces(testString) {
   var justSpaces = /^\s+$/;
-  if (justSpaces.test(testString)) {
-    return true;
-  }
-  return false;
+  return justSpaces.test(testString);
 }
